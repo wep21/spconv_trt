@@ -23,7 +23,7 @@ int main(int argc, char * argv[]) {
     );
     auto features = spconv::Tensor::load("data/bevfusion/infer.xyz.voxels");
     auto indices = spconv::Tensor::load("data/bevfusion/infer.xyz.coors");
-    std::vector<int> grid_size{41, 1440, 1440};
+    std::vector<int> grid_size{1440, 1440, 41};
     auto order = IndiceOrder::XYZ;
     cudaStream_t stream;
     cudaStreamCreate(&stream);
